@@ -1,0 +1,105 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Background Slideshow */
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.slideshow img.active {
+  opacity: 1;
+}
+
+/* Quiz container */
+.container {
+  z-index: 1;
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.3); /* darker background for contrast */
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  color: #fff;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 20px 0;
+  color: #fff;
+}
+
+button {
+  background: #fff;
+  color: #ff1493;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #ff69b4;
+  color: #fff;
+}
+
+.question, .result {
+  font-size: 1.4em;
+  margin: 20px 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.options button {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  background: rgba(255, 255, 255, 0.85);
+  color: #ff1493;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.options button:hover {
+  background: #ff1493;
+  color: white;
+}
